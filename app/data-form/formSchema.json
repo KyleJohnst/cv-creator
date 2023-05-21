@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Please enter your name and surname"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Add your title/Occupation, ie Software Engineer etc"
+    },
+    "profilePicture": {
+      "type": "string",
+      "format": "binary"
+    },
+    "birthDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "personalData": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "type": "number"
+        },
+        "telephone": {
+          "type": "number"
+        },
+        "email": {
+          "type": "string",
+          "description": "Your best contact email"
+        },
+        "city": {
+          "type": "string",
+          "description": "The city you reside in"
+        },
+        "postalCode": {
+          "type": "string",
+          "maxLength": 10
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "workExperience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "keyPoints": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill name": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 200
+          }
+        }
+      }
+    }
+  },
+  "required": []
+}
