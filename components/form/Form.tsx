@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { JsonForms } from "@jsonforms/react";
-import schema from "../../app/data-form/formSchema.json";
+import schema from "./formSchema.json";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
